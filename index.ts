@@ -217,10 +217,12 @@ function exportXLSX (params: InterceptorExportParams) {
           if (useStyle) {
             Object.assign(excelCell, {
               font: {
-                bold: true,
+                name: 'Arial',
+                bold: false,
                 color: {
                   argb: defaultCellFontColor
-                }
+                },
+                size: 8
               },
               fill: {
                 type: 'pattern',
@@ -247,6 +249,8 @@ function exportXLSX (params: InterceptorExportParams) {
         if (useStyle) {
           Object.assign(excelCell, {
             font: {
+              name: 'Arial',
+              size: 8,
               color: {
                 argb: defaultCellFontColor
               }
@@ -269,6 +273,8 @@ function exportXLSX (params: InterceptorExportParams) {
           if (useStyle) {
             Object.assign(excelCell, {
               font: {
+                name: 'Arial',
+                size: 8,
                 color: {
                   argb: defaultCellFontColor
                 }
