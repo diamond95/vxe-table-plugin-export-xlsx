@@ -222,10 +222,12 @@ function exportXLSX (params: VxeGlobalInterceptorHandles.InterceptorExportParams
           if (useStyle) {
             Object.assign(excelCell, {
               font: {
+                name: 'Arial',
                 bold: true,
                 color: {
                   argb: defaultCellFontColor
-                }
+                },
+                size: 8
               },
               fill: {
                 type: 'pattern',
