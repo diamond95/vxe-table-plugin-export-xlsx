@@ -314,6 +314,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
                 },
                 border: getDefaultBorderStyle()
               });
+            } else {
+              Object.assign(excelCell, {
+                font: {
+                  name: 'Arial',
+                  bold: false,
+                  size: 8
+                }
+              });
             }
           });
         });
@@ -340,6 +348,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
                 }
               },
               border: getDefaultBorderStyle()
+            });
+          } else {
+            Object.assign(excelCell, {
+              font: {
+                name: 'Arial',
+                bold: false,
+                size: 8
+              }
             });
           }
         });
@@ -368,6 +384,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
                   }
                 },
                 border: getDefaultBorderStyle()
+              });
+            } else {
+              Object.assign(excelCell, {
+                font: {
+                  name: 'Arial',
+                  bold: false,
+                  size: 8
+                }
               });
             }
           });

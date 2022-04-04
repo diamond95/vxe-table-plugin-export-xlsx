@@ -237,6 +237,14 @@ function exportXLSX (params: InterceptorExportParams) {
               },
               border: getDefaultBorderStyle()
             })
+          } else {
+            Object.assign(excelCell, {
+              font: {
+                name: 'Arial',
+                bold: false,
+                size: 8
+              }
+            })
           }
         })
       })
@@ -261,6 +269,14 @@ function exportXLSX (params: InterceptorExportParams) {
             },
             border: getDefaultBorderStyle()
           })
+        } else {
+          Object.assign(excelCell, {
+            font: {
+              name: 'Arial',
+              bold: false,
+              size: 8
+            }
+          })
         }
       })
     })
@@ -284,6 +300,14 @@ function exportXLSX (params: InterceptorExportParams) {
                 }
               },
               border: getDefaultBorderStyle()
+            })
+          } else {
+            Object.assign(excelCell, {
+              font: {
+                name: 'Arial',
+                bold: false,
+                size: 8
+              }
             })
           }
         })
