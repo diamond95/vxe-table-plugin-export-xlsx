@@ -98,6 +98,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       vertical: 'middle',
       horizontal: align || 'left'
     };
+    excelCell.font = {
+      name: 'Arial',
+      size: 8
+    };
   }
 
   function getDefaultBorderStyle() {
