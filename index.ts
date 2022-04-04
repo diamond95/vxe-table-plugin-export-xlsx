@@ -77,6 +77,10 @@ function setExcelCellStyle (excelCell: ExcelJS.Cell, align?: ColumnAlign) {
     vertical: 'middle',
     horizontal: align || 'left'
   }
+  excelCell.font = {
+    name: 'Arial',
+    size: 8
+  }
 }
 
 function getDefaultBorderStyle () {
@@ -233,14 +237,6 @@ function exportXLSX (params: InterceptorExportParams) {
               },
               border: getDefaultBorderStyle()
             })
-          } else {
-            Object.assign(excelCell, {
-              font: {
-                name: 'Arial',
-                bold: false,
-                size: 8
-              },
-            })
           }
         })
       })
@@ -264,14 +260,6 @@ function exportXLSX (params: InterceptorExportParams) {
               }
             },
             border: getDefaultBorderStyle()
-          })
-        } else {
-          Object.assign(excelCell, {
-            font: {
-              name: 'Arial',
-              bold: false,
-              size: 8
-            },
           })
         }
       })
