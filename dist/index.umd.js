@@ -289,6 +289,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           }
 
           excelRow.eachCell(function (excelCell) {
+            Object.assign(excelCell, {
+              font: {
+                name: 'Arial',
+                bold: false,
+                size: 8
+              }
+            });
             var excelCol = sheet.getColumn(excelCell.col);
             var column = $table.getColumnById(excelCol.key);
             var headerAlign = column.headerAlign,
@@ -314,14 +321,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
                 },
                 border: getDefaultBorderStyle()
               });
-            } else {
-              Object.assign(excelCell, {
-                font: {
-                  name: 'Arial',
-                  bold: false,
-                  size: 8
-                }
-              });
             }
           });
         });
@@ -333,6 +332,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         }
 
         excelRow.eachCell(function (excelCell) {
+          Object.assign(excelCell, {
+            font: {
+              name: 'Arial',
+              bold: false,
+              size: 8
+            }
+          });
           var excelCol = sheet.getColumn(excelCell.col);
           var column = $table.getColumnById(excelCol.key);
           var align = column.align;
@@ -349,14 +355,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
               },
               border: getDefaultBorderStyle()
             });
-          } else {
-            Object.assign(excelCell, {
-              font: {
-                name: 'Arial',
-                bold: false,
-                size: 8
-              }
-            });
           }
         });
       });
@@ -368,6 +366,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           }
 
           excelRow.eachCell(function (excelCell) {
+            Object.assign(excelCell, {
+              font: {
+                name: 'Arial',
+                bold: false,
+                size: 8
+              }
+            });
             var excelCol = sheet.getColumn(excelCell.col);
             var column = $table.getColumnById(excelCol.key);
             var footerAlign = column.footerAlign,
@@ -384,14 +389,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
                   }
                 },
                 border: getDefaultBorderStyle()
-              });
-            } else {
-              Object.assign(excelCell, {
-                font: {
-                  name: 'Arial',
-                  bold: false,
-                  size: 8
-                }
               });
             }
           });

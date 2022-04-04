@@ -214,6 +214,13 @@ function exportXLSX (params: InterceptorExportParams) {
           setExcelRowHeight(excelRow, rowHeight)
         }
         excelRow.eachCell(excelCell => {
+          Object.assign(excelCell, {
+            font: {
+              name: 'Arial',
+              bold: false,
+              size: 8
+            }
+          })
           const excelCol = sheet.getColumn(excelCell.col)
           const column: any = $table.getColumnById(excelCol.key as string)
           const { headerAlign, align } = column
@@ -237,14 +244,6 @@ function exportXLSX (params: InterceptorExportParams) {
               },
               border: getDefaultBorderStyle()
             })
-          } else {
-            Object.assign(excelCell, {
-              font: {
-                name: 'Arial',
-                bold: false,
-                size: 8
-              }
-            })
           }
         })
       })
@@ -254,6 +253,13 @@ function exportXLSX (params: InterceptorExportParams) {
         setExcelRowHeight(excelRow, rowHeight)
       }
       excelRow.eachCell(excelCell => {
+        Object.assign(excelCell, {
+          font: {
+            name: 'Arial',
+            bold: false,
+            size: 8
+          }
+        })
         const excelCol = sheet.getColumn(excelCell.col)
         const column: any = $table.getColumnById(excelCol.key as string)
         const { align } = column
@@ -269,14 +275,6 @@ function exportXLSX (params: InterceptorExportParams) {
             },
             border: getDefaultBorderStyle()
           })
-        } else {
-          Object.assign(excelCell, {
-            font: {
-              name: 'Arial',
-              bold: false,
-              size: 8
-            }
-          })
         }
       })
     })
@@ -286,6 +284,13 @@ function exportXLSX (params: InterceptorExportParams) {
           setExcelRowHeight(excelRow, rowHeight)
         }
         excelRow.eachCell(excelCell => {
+          Object.assign(excelCell, {
+            font: {
+              name: 'Arial',
+              bold: false,
+              size: 8
+            }
+          })
           const excelCol = sheet.getColumn(excelCell.col)
           const column: any = $table.getColumnById(excelCol.key as string)
           const { footerAlign, align } = column
@@ -300,14 +305,6 @@ function exportXLSX (params: InterceptorExportParams) {
                 }
               },
               border: getDefaultBorderStyle()
-            })
-          } else {
-            Object.assign(excelCell, {
-              font: {
-                name: 'Arial',
-                bold: false,
-                size: 8
-              }
             })
           }
         })
